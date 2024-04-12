@@ -26,6 +26,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: user/app:latest
+          tags: espenhgn/geno_nn:latest
           file: ./docker/dockerfiles/geno_nn/Dockerfile
-          
