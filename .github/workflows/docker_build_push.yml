@@ -34,5 +34,4 @@ jobs:
           push: true
           tags: |
             espenhgn/geno_nn:latest
-            ghcr.io/espenhgn/geno_nn:latest
           file: ./docker/dockerfiles/geno_nn/Dockerfile
