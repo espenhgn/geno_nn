@@ -27,3 +27,5 @@ jobs:
         with:
           push: true
           tags: user/app:latest
+          file: ./docker/dockerfiles/geno_nn/Dockerfile
+          
