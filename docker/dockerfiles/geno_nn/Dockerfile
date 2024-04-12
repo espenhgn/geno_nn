@@ -23,9 +23,9 @@ RUN wget --no-check-certificate https://s3.amazonaws.com/plink1-assets/plink_lin
     rm -rf plink_linux_x86_64_20200616.zip && \
     mv plink /bin
 
-RUN wget --no-check-certificate https://s3.amazonaws.com/plink2-assets/alpha3/plink2_linux_x86_64_20220814.zip && \
-    unzip -j plink2_linux_x86_64_20220814.zip && \
-    rm -rf plink2_linux_x86_64_20220814.zip && \
+RUN wget --no-check-certificate https://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_20240318.zip && \
+    unzip -j plink2_linux_x86_64_20240318.zip && \
+    rm -rf plink2_linux_x86_64_20240318.zip && \
     mv plink2 /bin
 
 RUN rm -rf /tmp/*
