@@ -1,10 +1,10 @@
-FROM tensorflow/tensorflow:2.14.0-gpu-jupyter
+FROM tensorflow/tensorflow:2.18.0-gpu-jupyter
 
 RUN pip install \
-    scipy~=1.11.3 \
-    scikit-learn~=1.3.1  \
-    pandas~=2.1.1 \
-    pandas-plink~=2.2.9 && \
+    scipy~=1.15.1 \
+    scikit-learn~=1.6.1  \
+    pandas~=2.2.3 \
+    pandas-plink~=2.3.1 && \
     pip cache remove *
 
 RUN apt-get update && \
@@ -18,14 +18,14 @@ RUN wget --no-check-certificate https://github.com/precimed/simu/releases/downlo
     chmod +x simu_linux && \
     mv simu_linux  /bin/simu
 
-RUN wget --no-check-certificate https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20200616.zip && \
-    unzip -j plink_linux_x86_64_20200616.zip && \
-    rm -rf plink_linux_x86_64_20200616.zip && \
+RUN wget --no-check-certificate https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20241022.zip && \
+    unzip -j plink_linux_x86_64_20241022.zip && \
+    rm -rf plink_linux_x86_64_20241022.zip && \
     mv plink /bin
 
-RUN wget --no-check-certificate https://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_20240318.zip && \
-    unzip -j plink2_linux_x86_64_20240318.zip && \
-    rm -rf plink2_linux_x86_64_20240318.zip && \
+RUN wget --no-check-certificate https://s3.amazonaws.com/plink2-assets/alpha6/plink2_linux_x86_64_20241222.zip && \
+    unzip -j plink2_linux_x86_64_20241222.zip && \
+    rm -rf plink2_linux_x86_64_20241222.zip && \
     mv plink2 /bin
 
 RUN rm -rf /tmp/*
