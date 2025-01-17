@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:2.18.0-gpu-jupyter
+FROM tensorflow/tensorflow:2.16.2-gpu-jupyter
 
 RUN apt-get update && \
     apt-get install -y \
