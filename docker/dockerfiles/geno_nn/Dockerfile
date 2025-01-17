@@ -7,8 +7,6 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install \
-    keras-cv~=0.9.0 \
-    keras-hub~=0.18.1 \
     scipy~=1.15.1 \
     scikit-learn~=1.6.1  \
     pandas~=2.2.3 \
