@@ -1,17 +1,25 @@
 FROM tensorflow/tensorflow:2.18.0-gpu-jupyter
 
-RUN pip install \
-    scipy~=1.15.1 \
-    scikit-learn~=1.6.1  \
-    pandas~=2.2.3 \
-    pandas-plink~=2.3.1 && \
-    pip cache remove *
-
 RUN apt-get update && \
     apt-get install -y \
     wget && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+RUN pip install \
+    keras-cv~=0.9.0 \
+    keras-hub~=0.18.1 \
+    scipy~=1.15.1 \
+    scikit-learn~=1.6.1  \
+    pandas~=2.2.3 \
+    pandas-plink~=2.3.1 \
+    seaborn~=0.13.2 \
+    statsmodels~=0.14.4 \
+    lightgbm~=4.5.0 \
+    h5py~=3.12.1 \
+    tables~=3.10.2 \
+    && \
+    pip cache remove *
 
 WORKDIR /tmp
 RUN wget --no-check-certificate https://github.com/precimed/simu/releases/download/v0.9.4/simu_linux && \
