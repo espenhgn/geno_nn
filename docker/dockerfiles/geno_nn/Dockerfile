@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install \
+RUN pip install -U --upgrade-strategy only-if-needed \
     scipy~=1.15.1 \
     scikit-learn~=1.6.1  \
     pandas~=2.2.3 \
@@ -16,6 +16,8 @@ RUN pip install \
     lightgbm~=4.5.0 \
     h5py~=3.12.1 \
     tables~=3.10.2 \
+    keras_hub~=0.18.1 \
+    tensorflow~=2.16.2 \
     && \
     pip cache remove *
 
