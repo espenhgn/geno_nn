@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-deps \
+RUN pip install \
     scipy~=1.15.1 \
     scikit-learn~=1.6.1  \
     pandas~=2.2.3 \
@@ -16,7 +16,6 @@ RUN pip install --no-deps \
     lightgbm~=4.5.0 \
     h5py~=3.12.1 \
     tables~=3.10.2 \
-    keras_hub~=0.16.1 \
     && \
     pip cache remove *
 
