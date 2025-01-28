@@ -14,11 +14,11 @@ RUN pip install -U --upgrade-strategy only-if-needed \
     seaborn~=0.13.2 \
     statsmodels~=0.14.4 \
     lightgbm~=4.5.0 \
-    h5py~=3.12.1 \
     tables~=3.10.2 \
     keras_hub~=0.18.1 \
     tensorflow~=2.16.2 \
     transformers~=4.48.1 \
+    gpt4all~=2.8.2 \
     && \
     pip cache remove *
 
