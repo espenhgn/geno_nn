@@ -4,6 +4,7 @@ RUN apt-get update && \
     apt-get install -y \
     wget \
     libcudart11.0 \
+    libcublas11 \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
