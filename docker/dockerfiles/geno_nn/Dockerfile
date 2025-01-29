@@ -22,6 +22,7 @@ RUN pip install -U --upgrade-strategy only-if-needed \
     tensorflow~=2.16.2 \
     transformers~=4.48.1 \
     gpt4all~=2.8.2 \
+    typer~=0.15.1 \
     && \
     pip cache remove *
 
