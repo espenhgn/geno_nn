@@ -6,15 +6,18 @@ import kagglehub
 
 # list of BERT models to download from KaggleHub
 bert_model_path = ['keras/bert/keras/bert_tiny_en_uncased',
+                   'keras/bert/keras/bert_small_en_uncased',
+                   'keras/bert/keras/bert_medium_en_uncased',
+                   'keras/bert/keras/bert_base_en_uncased',
                    'keras/bert/keras/bert_base_en',
-                   'keras/bert/keras/bert_base_en_uncased']
+                   ]
 
 # Download selected version
 for model in bert_model_path:
     path = kagglehub.model_download(model)
     print("Path to model files:", path)
 
-    # move model files to this directory
+    # move model files to parent directory
     destination_dir = os.path.join(os.getcwd(), path.split('.cache')[-1][1:])
     os.makedirs(destination_dir, exist_ok=True)
     os.system(f'cp -r {path}/* {destination_dir}/')
