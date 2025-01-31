@@ -160,3 +160,10 @@ cython_debug/
 #.idea/
 
 data/
+src/keras/datasets/*
+src/kagglehub/*
+.DS_Store
+*.png
+*.jpg
+*.pdf
+*.sif

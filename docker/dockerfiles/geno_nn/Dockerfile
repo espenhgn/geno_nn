@@ -20,6 +20,7 @@ RUN pip install -U --upgrade-strategy only-if-needed \
     tables~=3.10.2 \
     keras_hub~=0.18.1 \
     tensorflow~=2.16.2 \
+    tensorflow-text~=2.16.2 \
     transformers~=4.48.1 \
     gpt4all~=2.8.2 \
     typer~=0.15.1 \
