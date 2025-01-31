@@ -1,0 +1,24 @@
+name: geno_nn
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip
+  - jupyter
+  - pip:
+    - tensorflow~=2.17.1
+    - tensorflow-metal~=1.1.0
+    - tensorflow-text~=2.17.0
+    - scipy~=1.15.1
+    - scikit-learn~=1.6.1
+    - pandas~=2.2.3
+    - pandas-plink~=2.3.1
+    - seaborn~=0.13.2
+    - statsmodels~=0.14.4
+    - lightgbm~=4.5.0
+    - tables~=3.10.2
+    - keras_hub~=0.18.1
+    - transformers~=4.48.1
+    - gpt4all~=2.8.2
+    - typer~=0.15.1
