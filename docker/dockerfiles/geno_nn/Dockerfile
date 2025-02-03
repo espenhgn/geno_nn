@@ -25,6 +25,7 @@ RUN pip install -U --upgrade-strategy only-if-needed \
     gpt4all~=2.8.2 \
     typer~=0.15.1 \
     shap~=0.46.0 \
+    xgboost~=2.1.3 \
     && \
     pip cache remove *
 
