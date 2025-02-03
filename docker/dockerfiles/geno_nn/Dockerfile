@@ -24,6 +24,7 @@ RUN pip install -U --upgrade-strategy only-if-needed \
     transformers~=4.48.1 \
     gpt4all~=2.8.2 \
     typer~=0.15.1 \
+    shap~=0.46.0 \
     && \
     pip cache remove *
 
