@@ -26,6 +26,7 @@ RUN pip install -U --upgrade-strategy only-if-needed \
     typer~=0.15.1 \
     shap~=0.46.0 \
     xgboost~=2.1.3 \
+    openpyxl~=3.1.5 \
     && \
     pip cache remove *
 
