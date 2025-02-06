@@ -5,6 +5,7 @@ RUN apt-get update && \
     wget \
     libcudart11.0 \
     libcublas11 \
+    graphviz \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
