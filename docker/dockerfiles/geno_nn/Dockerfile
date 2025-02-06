@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install -U --upgrade-strategy only-if-needed \
+RUN pip install \
     scipy~=1.15.1 \
     scikit-learn~=1.6.1  \
     pandas~=2.2.3 \
@@ -19,7 +19,6 @@ RUN pip install -U --upgrade-strategy only-if-needed \
     lightgbm~=4.5.0 \
     tables~=3.10.2 \
     keras_hub~=0.18.1 \
-    tensorflow~=2.16.2 \
     tensorflow-text~=2.16.1 \
     transformers~=4.48.1 \
     gpt4all~=2.8.2 \
@@ -27,6 +26,7 @@ RUN pip install -U --upgrade-strategy only-if-needed \
     shap~=0.46.0 \
     xgboost~=2.1.3 \
     openpyxl~=3.1.5 \
+    pydot~=3.0.4 \
     && \
     pip cache remove *
 
